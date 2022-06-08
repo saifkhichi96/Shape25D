@@ -161,7 +161,7 @@ class Renderer:
         os.makedirs(output_path, exist_ok=True)
 
         # Render the scene and save RGB image
-        self.scene_data.scene.render.filepath = os.path.join(output_path, '{}.png'.format(idx))
+        self.scene_data.scene.render.filepath = os.path.join(output_path, 'rgb_{}.png'.format(idx))
         bpy.ops.render.render(write_still=True)
 
         z = bpy.data.images['Viewer Node']
@@ -186,12 +186,12 @@ class Renderer:
                             dmap=depth.astype(np.float32),
                             nmap=norms.astype(np.float32))
 
-        # Also save the depth and normal maps as PNGs
-        cv2.imwrite(os.path.join(output_path, '{}_depth.png'.format(idx)), depth * 255)
-
-        norms = (norms + 1) / 2
-        norms[depth >= 1.0, :] = 1.0
-        cv2.imwrite(os.path.join(output_path, '{}_normals.png'.format(idx)), norms[:, :, ::-1] * 255)
+        # # Also save the depth and normal maps as PNGs
+        # cv2.imwrite(os.path.join(output_path, '{}_depth.png'.format(idx)), depth * 255)
+        #
+        # norms = (norms + 1) / 2
+        # norms[depth >= 1.0, :] = 1.0
+        # cv2.imwrite(os.path.join(output_path, '{}_normals.png'.format(idx)), norms[:, :, ::-1] * 255)
 
     def _render_sequence(self, model_name, camera, light, render_angles):
         """ Render a sequence of images.
