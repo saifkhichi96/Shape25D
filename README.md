@@ -14,8 +14,8 @@ Official repository of the paper titled "[Shape2.5D: A Dataset of Texture-less S
 > **TL;DR**
 > - We introduce a novel dataset, **Shape2.5D**:
 >   - For depth and normals estimation on texture-less surfaces
->   - 302k synthetic frames for 48 3D models.
->   - 62k more synthetic frames for 2600 ShapeNet objects.
+>   - 302k synthetic frames for 35 3D models.
+>   - 62k more synthetic frames for 2600 3D models of 13 common ShapeNet objects.
 >   - 4672 real-world frames for 6 clothing and household items.
 >   - Available for download [here](https://projects.dfki.uni-kl.de/textureless_object_data/).
 > - Benchmarks using an encoder-decoder network for depth and normals estimation.
@@ -26,7 +26,7 @@ Official repository of the paper titled "[Shape2.5D: A Dataset of Texture-less S
 
 ## Abstract
 
-Reconstructing texture-less surfaces poses unique challenges in computer vision, primarily due to the lack of specialized datasets that cater to the nuanced needs of depth and normals estimation in the absence of textural information. We introduce ”Shape2.5D,” a novel, large-scale dataset designed to address this gap. Comprising 364k images spanning 2648 3D models, our dataset provides depth and surface normal maps for texture-less object reconstruction. The proposed dataset includes synthetic images rendered with 3D modeling software to simulate various lighting conditions and viewing angles. It also incldues a real-world subset comprising 4672 frames captured with a depth camera. Our comprehensive benchmarks, performed using a modified encoder-decoder network, showcase the dataset’s capability to support the development of algorithms that robustly estimate depth and normals from RGB images. Our open-source data generation pipeline allows the dataset to be extended and adapted for future research.
+Reconstructing texture-less surfaces poses unique challenges in computer vision, primarily due to the lack of specialized datasets that cater to the nuanced needs of depth and normals estimation in the absence of textural information. We introduce "Shape2.5D," a novel, large-scale dataset designed to address this gap. Comprising 364k frames spanning 2635 3D models and 48 unique objects, our dataset provides depth and surface normal maps for texture-less object reconstruction. The proposed dataset includes synthetic images rendered with 3D modeling software to simulate various lighting conditions and viewing angles. It also incldues a real-world subset comprising 4672 frames captured with a depth camera. Our comprehensive benchmarks, performed using a modified encoder-decoder network, showcase the dataset's capability to support the development of algorithms that robustly estimate depth and normals from RGB images. Our open-source data generation pipeline allows the dataset to be extended and adapted for future research.
 
 ## Installation
 
